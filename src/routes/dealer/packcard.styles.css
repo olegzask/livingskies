@@ -1,0 +1,27 @@
+.pack-name {
+  background-color: gold;
+  color: black;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+}
+
+.pack-info {
+  min-height: 12rem;
+}
+
+.pack-el {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.price-dealer {
+  color: purple;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.price-retail {
+  color: gold;
+  font-size: 1.2rem;
+  margin: 0;
+}

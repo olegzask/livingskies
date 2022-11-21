@@ -1,0 +1,11 @@
+.home-page {
+  width: 100vw;
+  margin: 0px;
+  background-color: black;
+}
+
+@media screen and (max-width: 720px) {
+  .main-video {
+    display: none;
+  }
+}

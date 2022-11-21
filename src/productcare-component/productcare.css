@@ -1,0 +1,26 @@
+.productcare-container {
+  margin: 0 auto;
+  width: 90vw;
+}
+
+.care {
+  margin: 0 auto;
+  width: 70%;
+  color: white;
+  justify-content: center;
+}
+
+.care-header {
+  font-size: 1.5rem;
+  color: rgb(132, 33, 168);
+  border-bottom: 0.1rem solid rgb(132, 33, 168);
+}
+
+.rule {
+  font-size: 1rem;
+  margin: 0.8rem auto;
+}
+
+.span-rule {
+  font-size: 1.5rem;
+}

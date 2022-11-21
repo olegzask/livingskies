@@ -1,0 +1,120 @@
+.whyus-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.whyus-inner-container {
+  display: flex;
+  width: 80%;
+  gap: 1rem;
+}
+
+.whyus-header {
+  margin: auto;
+  width: 100%;
+  color: white;
+  font-size: 35px;
+  text-align: center;
+  /* border-top: 1px solid rgb(147, 2, 199); */
+  border-bottom: 1px solid rgb(65, 30, 78);
+}
+.whyus-image {
+  border-radius: 3px;
+  height: auto;
+  width: 100%;
+}
+
+.img-container {
+  display: flex;
+  margin: 0px;
+  align-items: center;
+}
+
+.button-default {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.icon-reason {
+  color: white;
+  padding-right: 10px;
+  color: rgb(65, 30, 78);
+}
+
+.inner-div-reason {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  margin: auto;
+}
+
+.whyus-left-column {
+  margin: 0px 10px;
+}
+
+.btn-contact {
+  margin: 0 0;
+  color: white;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+
+  border: 1px solid rgb(65, 30, 78);
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: black;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(65, 30, 78);
+  transition: 0.5s;
+}
+
+.btn:active {
+  background-color: black;
+  transition: 0s;
+}
+
+@media screen and (max-width: 720px) {
+  .whyus-container {
+    width: 80%;
+    justify-content: center;
+    padding-bottom: 5px;
+  }
+  .whyus-inner-container {
+    width: 100%;
+  }
+
+  .whyus-left-column {
+    margin: 0px;
+  }
+  .whyus-header {
+    width: 100%;
+    margin-bottom: 15px;
+    border-top: 1px solid rgb(65, 30, 78);
+    text-align: center;
+    font-size: 29px;
+  }
+
+  .whyus-image {
+    display: none;
+  }
+
+  .reason {
+    font-size: 20px;
+  }
+  .inner-div-reason {
+    height: 70px;
+  }
+
+  .btn-contact {
+    margin-top: 20px;
+    width: 90%;
+  }
+}

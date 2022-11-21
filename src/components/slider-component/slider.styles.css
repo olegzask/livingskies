@@ -1,0 +1,102 @@
+/* .slider {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3px;
+}
+
+*/
+.slider {
+  margin: auto;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.down-arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 70%;
+  color: white;
+  font-size: 10rem;
+  animation: MoveUpDown 1.5s linear infinite;
+}
+
+.arrow-redirect {
+  color: white;
+  opacity: 30%;
+  animation: svg-shadow 1.5s ease-in-out infinite alternate;
+}
+
+.arrow-redirect:hover {
+  transition: 0.5s;
+  opacity: 100%;
+}
+
+@media screen and (max-width: 720px) {
+  .down-arrow {
+    display: none;
+  }
+}
+
+@keyframes svg-shadow {
+  from {
+    filter: drop-shadow(0 0 3px #fff) drop-shadow(0 0 10px rgb(65, 30, 78))
+      drop-shadow(0 0 10px rgb(65, 30, 78));
+  }
+
+  to {
+    filter: drop-shadow(0 0 10px #fff) drop-shadow(0 0 25px rgb(65, 30, 78))
+      drop-shadow(0 0 10px rgb(65, 30, 78));
+  }
+}
+
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* .right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 35px;
+  font-size: 3rem;
+  padding: 3px;
+  color: black;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 35px;
+  font-size: 3rem;
+  color: black;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+} */
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+.slide-active {
+  opacity: 1;
+  transition-duration: 1s;
+}

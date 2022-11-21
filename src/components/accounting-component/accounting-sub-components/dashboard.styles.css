@@ -1,0 +1,87 @@
+.dash-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 auto;
+  width: 75%;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  gap: 2rem;
+  align-items: center;
+}
+
+.dash-header {
+  margin: 0 auto;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.totals-container {
+  margin-top: 2rem;
+  width: 90%;
+  display: flex;
+  height: auto;
+}
+
+.total-invoices {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  margin: 0 auto;
+  text-align: start;
+}
+
+.total-bills {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  margin: 0 auto;
+  text-align: start;
+}
+
+.overdue {
+  color: rgb(224, 67, 67);
+}
+
+.refresh-btn {
+  color: rgb(150, 150, 150);
+}
+
+@keyframes spin {
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
+
+.refresh-btn:hover {
+  transition: 1s;
+  color: rgb(54, 199, 102);
+  scale: 1.1;
+}
+
+/* .refresh-btn:active {
+  color: black;
+} */
+
+.anim {
+  animation-duration: 0.5s;
+  animation-name: spin;
+}
+
+.btn-dash {
+  background-color: rgb(58, 58, 58);
+  border: none;
+}
+
+.btn-dash:hover {
+  transition: 0.3s;
+  background-color: black;
+  color: white;
+  scale: 1.1;
+}

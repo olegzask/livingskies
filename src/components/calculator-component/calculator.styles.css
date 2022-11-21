@@ -1,0 +1,176 @@
+.calculator-outer-continer {
+  margin: 0 auto;
+  width: 100vw;
+  background-color: black;
+}
+
+.calculator-inner-container {
+  margin: 2.5rem auto;
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.calc-leftside {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.descript {
+  font-size: 1rem;
+  color: white;
+}
+
+.leftside-header {
+  font-size: 2rem;
+  text-align: start;
+  color: white;
+  border-bottom: 0.1rem solid white;
+  margin-bottom: 1.5rem;
+}
+
+.calc-rightside {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  border-left: 0.1rem solid rgb(165, 164, 164);
+}
+
+.rightside-header {
+  margin: 0 0;
+  color: white;
+  font-size: 2rem;
+  width: 60%;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 0.1rem solid white;
+}
+
+.leftside-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-descript {
+  color: white;
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.addwindow-btn {
+  font-size: 1rem;
+  width: 23%;
+  height: 100%;
+  background-color: black;
+}
+
+.range-container {
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+
+#range-checkbox {
+  margin: 0 0;
+  width: 1rem;
+}
+
+.range-header {
+  color: white;
+}
+
+.range-counter {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+}
+
+.addrange-btn {
+  margin: 0 0;
+  width: 30%;
+  background-color: black;
+}
+
+#range-input {
+  width: 30%;
+}
+
+input {
+  width: 20%;
+  border-radius: 0.2rem;
+  background-color: black;
+  border: 0.1rem solid rgb(65, 30, 78);
+  color: white;
+}
+
+::placeholder {
+  font-size: 0.85rem;
+}
+
+#notes {
+  width: 96%;
+  height: 3rem;
+  resize: none;
+  background-color: black;
+  border: 0.1rem solid rgb(65, 30, 78);
+  border-radius: 0.2rem;
+  color: white;
+  font-size: 1rem;
+}
+
+.window-list-container {
+  display: flex;
+  width: 100%;
+  gap: 0.1rem;
+  flex-direction: column;
+}
+
+.testr-cont {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.testr {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.grandtotal-price {
+  font-size: 2rem;
+  color: white;
+}
+
+.taxes {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.price-tax {
+  width: 92%;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.btn-checkout {
+  width: 50%;
+  margin: 0;
+  background-color: black;
+}

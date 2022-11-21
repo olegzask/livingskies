@@ -1,0 +1,170 @@
+.simulator-tint-container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  gap: 5rem;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 1rem 0rem;
+}
+
+.simulator-rightside {
+  width: 50%;
+}
+
+.left-side {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.images-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.tint-img {
+  position: relative;
+}
+
+.part-tint {
+  position: absolute;
+  margin: 0 auto;
+  width: 45%;
+  opacity: 0;
+  background: transparent;
+  transition: 0.7s;
+}
+
+.part-active {
+  opacity: 1;
+}
+
+.radio-buttons {
+  margin-left: 50px;
+}
+
+.radio-header {
+  color: black;
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.shades-header {
+  font-size: 25px;
+  width: 40%;
+}
+
+.shades {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.glass-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 50px;
+}
+
+.shade-number {
+  cursor: pointer;
+  font-size: 25px;
+  background-color: rgb(231, 231, 228);
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.number-inactive:hover {
+  background-color: rgb(177, 177, 173);
+}
+
+.shade-clicked {
+  transition: 0.5s;
+  background-color: black;
+  color: white;
+}
+
+.simulator-img {
+  height: 300px;
+  padding-left: 100px;
+}
+
+.section-container {
+  margin: auto;
+}
+
+.estimated-price {
+  font-size: 20px;
+  margin: 0px;
+  color: rgb(128, 126, 124);
+}
+
+.note {
+  margin: 0;
+}
+
+.price-total {
+  background-color: rgb(65, 30, 78);
+  border-radius: 0.3rem;
+  width: 35%;
+  text-align: center;
+  color: white;
+  padding: 5px 15px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.price-tint {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.btn-tint-simulator {
+  width: 100%;
+  background-color: white;
+  border: 0.1rem solid rgb(65, 30, 78);
+  color: rgb(65, 30, 78);
+}
+
+.btn-tint-simulator:hover {
+  color: white;
+}
+
+@media screen and (max-width: 720px) {
+  .opts-container {
+    margin: 0 auto;
+  }
+
+  .parts-opts {
+    width: 100%;
+  }
+
+  .part-tint {
+    width: 90%;
+  }
+
+  .shades-header {
+    font-size: 1.2rem;
+  }
+
+  .price-tint {
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .price-total {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+}

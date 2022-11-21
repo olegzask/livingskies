@@ -1,0 +1,123 @@
+.contactform-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contact-form {
+  margin: 0 auto;
+  width: 100%;
+  gap: 0.3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-top {
+  display: flex;
+  gap: 0.6rem;
+  flex-direction: row;
+  width: 100%;
+}
+
+.form-top-left {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 0.3rem;
+  width: 50%;
+}
+
+.form-top-right {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 0.3rem;
+  width: 50%;
+}
+
+.inp-name {
+  width: 100%;
+}
+.inp-phone {
+  width: 100%;
+}
+
+.contactform-header {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 1.7rem;
+  text-align: center;
+  color: white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn-submit {
+  margin: 1rem auto;
+  background-color: black;
+  width: 100%;
+}
+
+.service-select {
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: black;
+  border: 0.1rem solid rgb(65, 30, 78);
+  border-radius: 0.2rem;
+  color: white;
+}
+
+#usernotes {
+  height: 10rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  resize: none;
+  background-color: black;
+  border: 0.1rem solid rgb(65, 30, 78);
+  border-radius: 0.2rem;
+  color: white;
+  margin-bottom: 0.7rem;
+}
+
+#email {
+  width: 98%;
+}
+
+#vehicle {
+  width: 98%;
+}
+
+::placeholder {
+  color: rgb(156, 156, 156);
+  padding-left: 0.5rem;
+}
+
+input {
+  background-color: white;
+  height: 1.8rem;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+}
+
+@media screen and (max-width: 720px) {
+  .contactform-container {
+    width: 90%;
+  }
+
+  ::placeholder {
+    padding-left: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .form-top {
+    width: 99%;
+  }
+}

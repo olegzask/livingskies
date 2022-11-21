@@ -1,0 +1,105 @@
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.tint-card-left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.btns-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.btn-card {
+  width: 100%;
+  font-size: 1.5rem;
+  background-color: black;
+}
+
+.tint-card-right {
+  width: 60%;
+}
+
+.card-header {
+  padding: 0 1rem;
+  background-color: white;
+  font-size: 2.5rem;
+  color: black;
+}
+
+.card-img {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.card-description {
+  color: white;
+  font-size: 1.1rem;
+  padding-bottom: 1rem;
+}
+
+.shade-header {
+  width: 100%;
+  margin: 0 auto;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.tint-shades {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.feature {
+  margin: 0 auto;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.feat-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.features-header {
+  color: white;
+  font-size: 2.5rem;
+  border-bottom: 1px solid white;
+}
+
+.feat-name {
+  color: rgb(132, 33, 168);
+
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.feat-description {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.feature-icon {
+  font-size: 2rem;
+  color: rgb(132, 33, 168);
+}

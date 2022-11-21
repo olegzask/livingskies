@@ -1,0 +1,38 @@
+#signup-modal {
+  position: relative;
+
+  transition: 1s;
+  display: none;
+  width: 100%;
+  margin: 0 auto;
+  gap: 0.3rem;
+  border: none;
+}
+
+#signup-name {
+  width: 98%;
+}
+
+#signup-email {
+  width: 98%;
+}
+
+#signup-password {
+  width: 98%;
+}
+.btn-register {
+  background-color: white;
+  color: black;
+}
+
+.btn-register:hover {
+  background-color: rgb(194, 192, 192);
+  color: black;
+}
+
+@media screen and (max-width: 720px) {
+  #signup-modal {
+    width: 90%;
+    height: 100%;
+  }
+}

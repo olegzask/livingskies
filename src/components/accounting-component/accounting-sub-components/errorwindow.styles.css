@@ -1,0 +1,60 @@
+.error-window {
+  display: none;
+  margin: 0 auto;
+  width: 40%;
+  height: auto;
+  position: fixed;
+  margin-top: 20%;
+  background-color: white;
+  border: 0.2rem solid black;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+.error-active {
+  display: block;
+}
+
+.err-msg {
+  margin: 0 auto;
+  font-size: 2rem;
+  padding-top: 0.4rem;
+}
+
+.error-list {
+  width: 80%;
+  margin: 0 auto;
+  gap: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding-bottom: 1rem;
+}
+
+.err-name {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.err-top {
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.close-btn {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+  width: 30%;
+  border-radius: 0.2rem;
+  display: flex;
+  font-size: 1.4rem;
+  justify-content: center;
+  color: rgb(65, 30, 78);
+}
+
+.close-btn:hover {
+  color: white;
+}

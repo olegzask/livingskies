@@ -1,0 +1,181 @@
+.authorization-header {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.registration-header {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.auth-main-container {
+  margin: 0 auto;
+}
+
+.auth-container {
+  align-items: center;
+  display: flex;
+  margin: 3rem auto;
+  width: 60%;
+  height: 25rem;
+  background-color: rgb(65, 30, 78);
+  border-radius: 0.5rem;
+}
+
+.auth-leftside {
+  width: 50%;
+  height: 99%;
+  display: flex;
+  margin: 0 0.1rem;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  border: none;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.login-header {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.login-form {
+  margin: 1rem auto;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  border: none;
+}
+
+#login-email {
+  width: 98%;
+}
+#login-password {
+  width: 98%;
+}
+
+.inputs {
+  color: white;
+  border-radius: 0.3rem;
+  background-color: black;
+  border: 0.1rem solid rgb(65, 30, 78);
+}
+
+.btn-login {
+  margin: 0 auto;
+  width: 100%;
+  background-color: black;
+}
+
+.forgot-password {
+  color: rgb(65, 30, 78);
+  margin: 0 auto;
+}
+
+.forgot-password:hover {
+  transition: 0.5s;
+  color: rgb(233, 235, 234);
+}
+.google-auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.google-or {
+  font-size: 1rem;
+  color: white;
+}
+
+.login-icon {
+  font-size: 2rem;
+  color: rgb(20, 22, 119);
+  cursor: pointer;
+}
+
+.login-icon:hover {
+  transition: 0.2s;
+  scale: 1.2;
+}
+
+.icons-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.auth-rightside {
+  background-color: rgb(65, 30, 78);
+  border: none;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup-header {
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+.btn-signup {
+  margin: 0 auto;
+  width: 70%;
+  background-color: white;
+  color: black;
+}
+.btn-signup:hover {
+  background-color: rgb(176, 184, 184);
+}
+
+@media screen and (max-width: 720px) {
+  .auth-main-container {
+    height: auto;
+  }
+
+  .auth-container {
+    margin: 3rem auto;
+    margin-bottom: auto;
+    width: 80%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .auth-rightside {
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .auth-leftside {
+    margin: 0.1rem auto;
+    margin-left: 0.15rem;
+    width: 99%;
+    height: auto;
+    padding: 0.5rem 0;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-left-radius: 0rem;
+  }
+
+  .login-form {
+    width: 80%;
+
+    margin: 0.3rem auto;
+  }
+  .btn-signup {
+    width: 72%;
+  }
+}

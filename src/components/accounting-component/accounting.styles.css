@@ -1,0 +1,8 @@
+.accounting-main-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+}

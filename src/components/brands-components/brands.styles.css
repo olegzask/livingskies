@@ -1,0 +1,57 @@
+.brands-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  text-align: start;
+  width: 100vw;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 70px;
+  padding: 0;
+  border-top: 2px solid white;
+}
+
+.brands-header {
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+}
+
+.trust-icon {
+  margin: 0 auto;
+  font-size: 25px;
+}
+
+.brands-logos-container {
+  display: flex;
+  gap: 1 rem;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  height: 100px;
+  background-color: white;
+  margin: 0 auto;
+  padding: 20px 0px;
+  padding: 0px;
+}
+
+.brand-logo {
+  margin: 0 auto;
+  height: 50%;
+  color: white;
+}
+
+@media screen and (max-width: 720px) {
+  .brand-logo {
+    height: 30%;
+  }
+
+  .brands-header {
+    font-size: 2.2rem;
+    width: 100%;
+  }
+  .header-container {
+    text-align: center;
+  }
+}

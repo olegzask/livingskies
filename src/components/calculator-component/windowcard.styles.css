@@ -1,0 +1,38 @@
+.windowcard-container {
+  margin: 0 auto;
+  width: 85%;
+  height: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  color: white;
+  align-items: center;
+}
+
+.hedr {
+  font-size: 0.85rem;
+  width: 30%;
+}
+
+.btn-window-notes {
+  width: 4rem;
+  margin: 0 0;
+  font-size: 0.75rem;
+  background-color: black;
+}
+
+.close-icon {
+  font-size: 1.2rem;
+}
+
+.close-icon:hover {
+  color: red;
+}
+
+.modal-active {
+  display: block;
+}
+
+.active-window {
+  padding: 0.2rem;
+  border: 0.1rem solid rgb(65, 30, 78);
+}
