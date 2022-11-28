@@ -31,7 +31,7 @@
 .left-side-nav {
   display: flex;
   width: 30%;
-  margin: auto;
+  margin: 0 auto;
   justify-content: flex-end;
   gap: 1rem;
 }
@@ -136,7 +136,7 @@
 
 @media screen and (max-width: 720px) {
   .left-side-nav {
-    gap: 1rem;
+    gap: 2rem;
     width: 80%;
     justify-content: space-between;
   }
@@ -153,7 +153,6 @@
     background-color: black;
     opacity: 1;
     border: none;
-    margin-bottom: 3rem;
   }
 
   .left-side-nav {

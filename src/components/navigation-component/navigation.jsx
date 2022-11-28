@@ -41,14 +41,14 @@ const Navigation = () => {
           </a>
           <a className="contact-link contact-link-phone" href="tel:13069618468">
             <BsFillTelephoneFill className="icons" id="phone" />
-            1-306-961-8468
+            Give us a call
           </a>
           <a
             className="contact-link contact-link-email"
             href="mailto:livingskiestint@gmail.com"
           >
             <MdEmail className="icons" />
-            livingskiestint@gmail.com
+            Email us
           </a>
         </div>
         <div className="nav-container">

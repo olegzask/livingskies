@@ -114,7 +114,8 @@
   }
 
   .card-header {
-    width: 90%;
+    width: 92%;
+    font-size: 1.9rem;
   }
 
   .tint-card-left {
@@ -141,12 +142,13 @@
   }
 
   .btns-container {
-    width: 90%;
+    width: 100%;
     justify-content: center;
   }
 
   .btn-card {
-    font-size: 1.2rem;
+    width: 100%;
+    font-size: 1rem;
   }
 
   .tint-card-right {
@@ -156,6 +158,8 @@
   }
 
   .features-header {
-    font-size: 2rem;
+    width: 100%;
+    font-size: 1.7rem;
+    text-align: center;
   }
 }
