@@ -103,3 +103,59 @@
   font-size: 2rem;
   color: rgb(132, 33, 168);
 }
+
+@media screen and (max-width: 720px) {
+  .card-container {
+    display: block;
+    width: 100%;
+
+    padding-bottom: 2rem;
+    border-bottom: 0.1rem solid white;
+  }
+
+  .card-header {
+    width: 90%;
+  }
+
+  .tint-card-left {
+    width: 90%;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .shades-ctn {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+
+  .shade-header {
+    font-size: 1.2rem;
+    width: 50%;
+  }
+
+  .tint-shades {
+    width: 50%;
+    font-size: 1.1rem;
+  }
+
+  .btns-container {
+    width: 90%;
+    justify-content: center;
+  }
+
+  .btn-card {
+    font-size: 1.2rem;
+  }
+
+  .tint-card-right {
+    margin: 0 auto;
+    width: 90%;
+    justify-content: center;
+  }
+
+  .features-header {
+    font-size: 2rem;
+  }
+}

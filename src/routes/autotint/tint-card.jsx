@@ -19,17 +19,19 @@ export const TintCard = ({ options }) => {
         <h2 className="card-header">{tintType}</h2>
         <img className="card-img" src={img} alt="" />
         <span className="card-description">{description}</span>
-        {shades ? (
-          <header className="shade-header">SHADES AVAILABLE:</header>
-        ) : null}
+        <div className="shades-ctn">
+          {shades ? (
+            <header className="shade-header">SHADES AVAILABLE:</header>
+          ) : null}
 
-        {shades ? (
-          <span className="tint-shades">
-            {shades.map((shade, id) =>
-              id < shades.length - 1 ? `${shade}  /  ` : `${shade}`
-            )}
-          </span>
-        ) : null}
+          {shades ? (
+            <span className="tint-shades">
+              {shades.map((shade, id) =>
+                id < shades.length - 1 ? `${shade}  /  ` : `${shade}`
+              )}
+            </span>
+          ) : null}
+        </div>
 
         <div className="btns-container">
           <Button
