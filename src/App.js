@@ -18,7 +18,6 @@ import { ProductCare } from "./productcare-component/ProductCare";
 import { Dealer } from "./routes/dealer/Dealer";
 import { Blog } from "./routes/blog/Blog";
 import { Team } from "./routes/team/Team";
-import { ContactUsNow } from "./components/EmailTest";
 import "./App.css";
 
 const App = () => {
@@ -44,7 +43,6 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/productcare" element={<ProductCare />} />
         <Route path="/dealer" element={<Dealer />} />
-        <Route path="/email" element={<ContactUsNow />} />
 
         <Route index element={<Footer />} />
       </Route>

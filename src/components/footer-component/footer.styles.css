@@ -100,4 +100,13 @@
   .footer-link {
     font-size: 18px;
   }
+
+  .oleg {
+    font-size: 0.8rem;
+  }
+
+  .copyright {
+    width: 80%;
+    font-size: 0.7rem;
+  }
 }

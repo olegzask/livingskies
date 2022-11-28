@@ -28,7 +28,7 @@ export const Whyus = () => {
           })}
 
           <div className="button-default">
-            <Link to="/contact" className="btn btn-contact">
+            <Link to="/contact" className="btn-contact">
               GET QUOTE
             </Link>
           </div>

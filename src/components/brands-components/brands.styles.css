@@ -25,10 +25,10 @@
 
 .brands-logos-container {
   display: flex;
-  gap: 1 rem;
+  gap: 1rem;
   align-items: center;
-  width: 100%;
-  justify-content: space-between;
+  width: 100vw;
+  justify-content: center;
   height: 100px;
   background-color: white;
   margin: 0 auto;
@@ -44,7 +44,14 @@
 
 @media screen and (max-width: 720px) {
   .brand-logo {
-    height: 30%;
+    width: 15%;
+    height: auto;
+  }
+
+  .brands-logos-container {
+    width: 100vw;
+    justify-content: space-around;
+    gap: 0rem;
   }
 
   .brands-header {

@@ -41,7 +41,7 @@ const Navigation = () => {
           </a>
           <a className="contact-link contact-link-phone" href="tel:13069618468">
             <BsFillTelephoneFill className="icons" id="phone" />
-            Give us a call
+            1-306-961-8468
           </a>
           <a
             className="contact-link contact-link-email"

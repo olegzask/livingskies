@@ -135,6 +135,12 @@
 }
 
 @media screen and (max-width: 720px) {
+  .left-side-nav {
+    gap: 1rem;
+    width: 80%;
+    justify-content: space-between;
+  }
+
   .contact-link {
     padding: 0px 2px;
     margin-bottom: 5px;

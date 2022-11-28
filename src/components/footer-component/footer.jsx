@@ -89,11 +89,11 @@ export const Footer = () => {
       </div>
       <h2 className="copyright">
         Website by{" "}
-        <a href="https://www.ozstudios.ca" className="oleg">
+        <a href="https://www.facebook.com/oleg.zaskovets.58" className="oleg">
           {" "}
           Oleg Zaskovets{" "}
         </a>{" "}
-        2022 All Rights Reserved &copy;
+        2022 All Rights Reserved
       </h2>
     </div>
   );
