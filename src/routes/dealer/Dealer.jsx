@@ -15,6 +15,8 @@ export const Dealer = () => {
       document.getElementById("pwinput").value = "";
       document.getElementById("mdealer").classList.add("visible");
       document.getElementById("bookbutn").classList.add("visible");
+      document.getElementById("subm_btn").style.display = "none";
+      document.getElementById("logout_btn").style.display = "block";
     }
 
     if (ghl + "" !== password) {
@@ -26,6 +28,8 @@ export const Dealer = () => {
   const hidePrice = () => {
     document.getElementById("mdealer").classList.remove("visible");
     document.getElementById("bookbutn").classList.remove("visible");
+    document.getElementById("subm_btn").style.display = "block";
+    document.getElementById("logout_btn").style.display = "none";
   };
 
   return (
@@ -37,10 +41,14 @@ export const Dealer = () => {
           type="text"
           id="pwinput"
         />
-        <button onClick={showPrice} className="btn btn-submitpw">
+        <button onClick={showPrice} id="subm_btn" className="btn btn-submitpw">
           SUBMIT
         </button>
-        <button onClick={hidePrice} className="btn btn-submitpw">
+        <button
+          onClick={hidePrice}
+          id="logout_btn"
+          className="btn btn-submitpw"
+        >
           LOG OUT
         </button>
       </div>

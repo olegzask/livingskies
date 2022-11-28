@@ -72,9 +72,9 @@ const Navigation = () => {
             <a className="nav-link" href="/contact">
               CONTACT US
             </a>
-            <a className="nav-link myaccount" href="/myaccount">
+            {/* <a className="nav-link myaccount" href="/myaccount">
               MY ACCOUNT
-            </a>
+            </a> */}
           </div>
 
           <div className="menu-mobile-container">
