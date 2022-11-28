@@ -47,26 +47,26 @@ export const services = [
       minivan: 350,
     },
   },
-  {
-    id: 4,
-    serviceName: "Advertising Wraps",
-    img: "/images/services-images/wraps.jpg",
-    products: ["3m", "avery"],
-    link: "/services/advertisingwraps",
-    simulator: "/wrap-calculator",
-    prices: {
-      from: 1999,
-    },
-  },
-  {
-    id: 5,
-    serviceName: "Powersports",
-    img: "/images/services-images/powersports.jpg",
-    products: ["3m", "avery"],
-    link: "/services/powersports",
-    simulator: "/simulator-powersports",
-    prices: {
-      from: 1999,
-    },
-  },
+  // {
+  //   id: 4,
+  //   serviceName: "Advertising Wraps",
+  //   img: "/images/services-images/wraps.jpg",
+  //   products: ["3m", "avery"],
+  //   link: "/services/advertisingwraps",
+  //   simulator: "/wrap-calculator",
+  //   prices: {
+  //     from: 1999,
+  //   },
+  // },
+  // {
+  //   id: 5,
+  //   serviceName: "Powersports",
+  //   img: "/images/services-images/powersports.jpg",
+  //   products: ["3m", "avery"],
+  //   link: "/services/powersports",
+  //   simulator: "/simulator-powersports",
+  //   prices: {
+  //     from: 1999,
+  //   },
+  // },
 ];

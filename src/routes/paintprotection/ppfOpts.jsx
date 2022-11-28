@@ -47,45 +47,45 @@ export const ppfOptions = [
       },
     ],
   },
-  {
-    tintType: "SUNTEK ULTRA",
-    img: "/images/logos/ultra.png",
-    description:
-      "Premium protection designed to last. SunTek Paint Protection Film Ultra is scientifically formulated to help maintain the beauty and integrity of vehicle finishes for many years, in all kinds of weather. It’s a combination of innovative film technologies that we stand behind with a 10-year limited warranty.",
-    brands: "Suntek",
+  // {
+  //   tintType: "SUNTEK ULTRA",
+  //   img: "/images/logos/ultra.png",
+  //   description:
+  //     "Premium protection designed to last. SunTek Paint Protection Film Ultra is scientifically formulated to help maintain the beauty and integrity of vehicle finishes for many years, in all kinds of weather. It’s a combination of innovative film technologies that we stand behind with a 10-year limited warranty.",
+  //   brands: "Suntek",
 
-    features: [
-      {
-        name: "Lasting Resistance",
-        symbol: <MdWaterDrop />,
-        description:
-          "HydroResist™ top coat increases stain resistance and product longevity by limiting water and dirt accumulation on the film's surface.",
-      },
-      {
-        name: "Extra Endurance",
-        symbol: <FaDumbbell />,
-        description:
-          "Automotive finishes stay fresh and flawless longer with a film that helps offer the most power to shield against damage caused by rocks, salt, insects, and other road debris.",
-      },
+  //   features: [
+  //     {
+  //       name: "Lasting Resistance",
+  //       symbol: <MdWaterDrop />,
+  //       description:
+  //         "HydroResist™ top coat increases stain resistance and product longevity by limiting water and dirt accumulation on the film's surface.",
+  //     },
+  //     {
+  //       name: "Extra Endurance",
+  //       symbol: <FaDumbbell />,
+  //       description:
+  //         "Automotive finishes stay fresh and flawless longer with a film that helps offer the most power to shield against damage caused by rocks, salt, insects, and other road debris.",
+  //     },
 
-      {
-        name: "Self-Healing",
-        symbol: <MdHealing />,
-        description:
-          "Repairing scratches is almost effortless; film self-heals using heat from a vehicle’s engine or the sun.",
-      },
-      {
-        name: "Great Looks",
-        symbol: <HiThumbUp />,
-        description:
-          "Paint Protection Film Ultra is available in matte and high gloss finishes. Outstanding optical clarity makes film nearly impossible to detect once installed.",
-      },
-      {
-        name: "10-Year Limited Warranty",
-        symbol: <FaShieldAlt />,
-        description:
-          "The manufacturer warrants professionally sold and applied SunTek® Paint Protection Film Ultra series against cracking, bubbling or yellowing for a period of ten years from the date of purchase of the Product. This 10-year limited warranty applies only to SunTek Paint Protection Film Ultra series. Other restrictions apply; contact a SunTek dealer or a customer service representative for details.",
-      },
-    ],
-  },
+  //     {
+  //       name: "Self-Healing",
+  //       symbol: <MdHealing />,
+  //       description:
+  //         "Repairing scratches is almost effortless; film self-heals using heat from a vehicle’s engine or the sun.",
+  //     },
+  //     {
+  //       name: "Great Looks",
+  //       symbol: <HiThumbUp />,
+  //       description:
+  //         "Paint Protection Film Ultra is available in matte and high gloss finishes. Outstanding optical clarity makes film nearly impossible to detect once installed.",
+  //     },
+  //     {
+  //       name: "10-Year Limited Warranty",
+  //       symbol: <FaShieldAlt />,
+  //       description:
+  //         "The manufacturer warrants professionally sold and applied SunTek® Paint Protection Film Ultra series against cracking, bubbling or yellowing for a period of ten years from the date of purchase of the Product. This 10-year limited warranty applies only to SunTek Paint Protection Film Ultra series. Other restrictions apply; contact a SunTek dealer or a customer service representative for details.",
+  //     },
+  //   ],
+  // },
 ];
