@@ -14,6 +14,7 @@ export const Dealer = () => {
     if (ghl + "" === password) {
       document.getElementById("pwinput").value = "";
       document.getElementById("mdealer").classList.add("visible");
+      document.getElementById("mdealer").style.height = "auto";
       document.getElementById("bookbutn").classList.add("visible");
       document.getElementById("subm_btn").style.display = "none";
       document.getElementById("logout_btn").style.display = "block";
