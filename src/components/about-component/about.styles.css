@@ -53,3 +53,10 @@
   background-color: black;
   transition: 0s;
 }
+
+@media screen and (max-width: 720px) {
+  .btn-about {
+    width: 80%;
+    font-size: 1.1rem;
+  }
+}

@@ -55,10 +55,11 @@
   }
 
   .brands-header {
-    font-size: 2.2rem;
-    width: 100%;
+    font-size: 2rem;
+    width: 90%;
   }
   .header-container {
     text-align: center;
+    width: 100%;
   }
 }

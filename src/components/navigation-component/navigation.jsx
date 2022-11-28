@@ -45,10 +45,10 @@ const Navigation = () => {
           </a>
           <a
             className="contact-link contact-link-email"
-            href="mailto:info@lswt.ca"
+            href="mailto:livingskiestint@gmail.com"
           >
             <MdEmail className="icons" />
-            info@lswt.ca
+            livingskiestint@gmail.com
           </a>
         </div>
         <div className="nav-container">

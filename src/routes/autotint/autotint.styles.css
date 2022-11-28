@@ -49,4 +49,12 @@
     font-size: 1.2rem;
     text-align: center;
   }
+
+  .autotint-header {
+    font-size: 2rem;
+  }
+
+  .tint-topper {
+    padding-bottom: 0;
+  }
 }

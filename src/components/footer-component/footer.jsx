@@ -50,8 +50,8 @@ export const Footer = () => {
             <a href="tel:13069618468" className="footer-link">
               1-306-961-8468
             </a>
-            <a href="mailto:info@lswt.ca" className="footer-link">
-              info@lswt.ca
+            <a href="mailto:livingskiestint@gmail.com" className="footer-link">
+              livingskiestint@gmail.com
             </a>
             <a href="/contact" className="footer-link">
               Contact Form
