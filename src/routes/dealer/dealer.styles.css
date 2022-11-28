@@ -54,3 +54,35 @@
   animation-fill-mode: forwards;
   display: flex;
 }
+
+@media screen and (max-width: 720px) {
+  #dealer-ctn {
+    margin: 0 auto;
+    width: 90vw;
+  }
+
+  .dealer-login {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .input-pw {
+    width: 50%;
+  }
+
+  .btn-submitpw {
+    width: 20%;
+    font-size: 1rem;
+  }
+
+  .main-dealer-container {
+    width: 85%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .btn-book {
+    width: 70%;
+  }
+}

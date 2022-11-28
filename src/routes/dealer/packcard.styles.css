@@ -25,3 +25,14 @@
   font-size: 1.2rem;
   margin: 0;
 }
+
+@media screen and (max-width: 720px) {
+  .pack-name {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .pack-info {
+    min-height: 5rem;
+  }
+}

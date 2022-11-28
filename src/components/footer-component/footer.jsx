@@ -12,9 +12,9 @@ export const Footer = () => {
             <a href="/about" className="footer-link">
               About
             </a>
-            <a href="/myaccount" className="footer-link">
+            {/* <a href="/myaccount" className="footer-link">
               My Account
-            </a>
+            </a> */}
             <a href="/productcare" className="footer-link">
               Product Care
             </a>
