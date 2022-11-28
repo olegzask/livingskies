@@ -15,9 +15,9 @@ export const ContactPage = () => {
           <a className="direct" href="tel:13069618468">
             <BsFillTelephoneFill className="loc-icon" /> 1-306-961-8468
           </a>
-          <a className="direct" href="mailto:info@lswt.ca">
+          <a className="direct" href="mailto:livingskiestint@gmail.com">
             <MdEmail className="loc-icon" />
-            info@lswt.ca
+            livingskiestint@gmail.com
           </a>
           <a
             target="_blank"
