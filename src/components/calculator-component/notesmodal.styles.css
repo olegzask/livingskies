@@ -39,9 +39,20 @@
 
 .modal-size {
   font-size: 1.2rem;
-  color: rgb(65, 30, 78);
+  color: white;
 }
 
 .modal-price {
-  color: rgb(65, 30, 78);
+  color: white;
+}
+
+@media screen and (max-width: 720px) {
+  .notesmodal-container {
+    position: fixed;
+    width: 87%;
+    height: 60vh;
+    top: 8rem;
+    right: 2.1rem;
+    margin: 0 auto;
+  }
 }

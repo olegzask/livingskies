@@ -104,7 +104,7 @@ export const Calculator = () => {
               name="qty"
               placeholder="How many?"
             />
-            <button onClick={addWindow} className="btn addwindow-btn">
+            <button onClick={addWindow} className="addwindow-btn">
               ADD
             </button>
           </div>
