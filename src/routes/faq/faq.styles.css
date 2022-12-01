@@ -64,13 +64,10 @@
 
   .questions-container {
     width: 100%;
+    gap: 1rem;
   }
 
   .faq-question {
     font-size: 1rem;
-  }
-
-  .question-icon {
-    font-size: 1.2rem;
   }
 }
