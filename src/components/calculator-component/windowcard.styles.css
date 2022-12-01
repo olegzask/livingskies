@@ -36,3 +36,22 @@
   padding: 0.2rem;
   border: 0.1rem solid rgb(65, 30, 78);
 }
+
+@media screen and (max-width: 720px) {
+  .windowcard-container {
+    width: 95%;
+    gap: 0;
+  }
+
+  .hedr {
+    font-size: 1.1rem;
+  }
+
+  .btn-window-notes {
+    font-size: 0.8rem;
+  }
+
+  .window-qty {
+    width: 20%;
+  }
+}

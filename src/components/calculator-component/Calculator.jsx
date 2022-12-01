@@ -78,6 +78,7 @@ export const Calculator = () => {
           </div>
           <div className="form-inputs">
             <input
+              className="input-field"
               required
               id="width"
               type="number"
@@ -86,6 +87,7 @@ export const Calculator = () => {
               placeholder="Width in inches"
             />
             <input
+              className="input-field"
               required
               min="0"
               id="height"
@@ -94,6 +96,7 @@ export const Calculator = () => {
               placeholder="Height in inches"
             />
             <input
+              className="input-field"
               required
               id="qty"
               min="1"
@@ -102,7 +105,7 @@ export const Calculator = () => {
               placeholder="How many?"
             />
             <button onClick={addWindow} className="btn addwindow-btn">
-              ADD WINDOW
+              ADD
             </button>
           </div>
           <textarea type="text" id="notes" placeholder="Any notes?"></textarea>
