@@ -3,9 +3,9 @@ export const teamList = [
     name: "Jeramiah Morrison",
     position: "Owner / Installer",
     experience: "15 Years",
-    specialization: ["Tinting", "Paint Protection Film", "Wraps"],
+    specialization: ["Tinting", "PPF", "Wraps"],
     about: "About me section",
-    picture: "images/teampics/miah.png",
+    picture: "images/teampics/miah.jpg",
   },
   {
     name: "Tyson",

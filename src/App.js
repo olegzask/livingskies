@@ -18,6 +18,8 @@ import { ProductCare } from "./productcare-component/ProductCare";
 import { Dealer } from "./routes/dealer/Dealer";
 import { Blog } from "./routes/blog/Blog";
 import { Team } from "./routes/team/Team";
+import { Media } from "./routes/media/Media";
+import { Careers } from "./routes/careers/Careers";
 import "./App.css";
 
 const App = () => {
@@ -43,6 +45,8 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/productcare" element={<ProductCare />} />
         <Route path="/dealer" element={<Dealer />} />
+        <Route path="/media" element={<Media />} />
+        <Route path="/careers" element={<Careers />} />
 
         <Route index element={<Footer />} />
       </Route>
