@@ -201,25 +201,27 @@ input {
   .addwindow-btn {
     font-size: 1rem;
     margin: 0 auto;
-    width: 100%;
+    width: 101.5%;
     height: 2.2rem;
     position: relative;
     top: 4.8rem;
+    border-radius: 0.2rem;
     background-color: rgb(65, 30, 78);
     border: none;
   }
 
-  .addrange-btn:active {
+  .addrange-btn:focus {
     background-color: black;
   }
 
   .input-field {
-    width: 98.5%;
+    margin: 0 auto;
+    width: 100%;
     text-align: center;
   }
 
   #notes {
-    width: 98%;
+    width: 100%;
     margin: 0 auto;
     position: relative;
     bottom: 3.2rem;
@@ -242,7 +244,7 @@ input {
     padding: 0;
     position: relative;
     bottom: 0.7rem;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   .range-counter {
@@ -260,13 +262,20 @@ input {
 
   .addrange-btn {
     width: 40%;
+    font-size: 0.8rem;
+    height: 2.1rem;
   }
 
   .calc-rightside {
     width: 90%;
-    margin-top: 2rem;
+    margin-top: 1rem;
     border: none;
     border-top: 0.1rem solid white;
+  }
+
+  .rightside-header {
+    font-size: 2rem;
+    width: 100%;
   }
 
   .window-list-container {
