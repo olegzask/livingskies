@@ -74,6 +74,18 @@
   width: 23%;
   height: 100%;
   background-color: black;
+  color: white;
+  border: 0.1rem solid rgb(65, 30, 78);
+  border-radius: 0.2rem;
+}
+
+.addwindow-btn:hover {
+  transition: 0.3s;
+  background-color: rgb(65, 30, 78);
+}
+
+.addwindow-btn:active {
+  background-color: black;
 }
 
 .range-container {

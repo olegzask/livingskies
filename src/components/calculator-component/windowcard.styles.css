@@ -25,7 +25,9 @@
 }
 
 .close-icon:hover {
+  transition: 0.3s;
   color: red;
+  scale: 130%;
 }
 
 .modal-active {
@@ -53,5 +55,9 @@
 
   .window-qty {
     width: 20%;
+  }
+
+  .close-icon {
+    font-size: 1.5rem;
   }
 }
