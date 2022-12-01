@@ -27,16 +27,21 @@ export const Calculator = () => {
         ? 1
         : Math.abs(+document.getElementById("qty").value);
     const nts = document.getElementById("notes").value;
-    const curWindow = {
-      width: wdth,
-      height: hgh,
-      qty: qt,
-      notes: nts,
-      id: windowList.length + 1,
-      priceTotal: Math.round(wdth * hgh * 0.0695) * qt,
-    };
-    setWindowList([...windowList, curWindow]);
-    setZero();
+
+    if (wdth && hgh && qt) {
+      const curWindow = {
+        width: wdth,
+        height: hgh,
+        qty: qt,
+        notes: nts,
+        id: windowList.length + 1,
+        priceTotal: Math.round(wdth * hgh * 0.0695) * qt,
+      };
+      setWindowList([...windowList, curWindow]);
+      setZero();
+    } else {
+      alert("Error, please check fields!");
+    }
   };
 
   const grandTotalPrice = () =>
