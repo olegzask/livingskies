@@ -200,9 +200,9 @@
   .fixed {
     position: fixed;
     margin: 0px;
-    right: 48px;
+    right: 0rem;
     z-index: 10;
-    color: rgb(147, 2, 199);
+    color: rgb(141, 20, 20);
   }
 
   .menu-button-mobile {

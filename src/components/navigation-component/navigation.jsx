@@ -19,16 +19,16 @@ const Navigation = () => {
   };
 
   const toggleNavMobile = () => {
-    const [mobContainer] =
-      document.getElementsByClassName("menu-button-mobile");
     const navBar = document.getElementById("nav-cont");
+
+    const mobCont = document.getElementById("mob-btn");
 
     !navBar.classList.contains("active")
       ? navBar.classList.add("active") &
-        mobContainer.classList.add("fixed") &
+        mobCont.classList.add("fixed") &
         setClicked(true)
       : navBar.classList.remove("active") &
-        mobContainer.classList.remove("fixed") &
+        mobCont.classList.remove("fixed") &
         setClicked(false);
   };
 
@@ -77,7 +77,7 @@ const Navigation = () => {
             </a> */}
           </div>
 
-          <div className="menu-mobile-container">
+          <div id="mob-btn" className="menu-mobile-container">
             {!clicked ? (
               <RiMenuUnfoldLine
                 onClick={toggleNavMobile}
