@@ -1,6 +1,6 @@
 export const answers = {
   firstQuestion:
-    "There are many things that can have an effect on price. But on average sedans are $280+. SUVs are $260+. MiniVans are $300+. Trucks are $200+",
+    "There are many things that can have an effect on price. But on average sedans are $300+. SUVs are $280+. MiniVans are $365+. Trucks are $200+",
   secondQuestion:
     "It really denepds on what vehicle needs to be wraped. Complexity & material amount differs from vehicle to vehicle. Its always better to contact us to get a quote.",
   thirdQuestion:

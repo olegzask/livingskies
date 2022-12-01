@@ -199,7 +199,7 @@
 
   .fixed {
     position: fixed;
-    margin: 0px;
+    margin: 0 auto;
     right: 0rem;
     z-index: 10;
     color: rgb(141, 20, 20);
