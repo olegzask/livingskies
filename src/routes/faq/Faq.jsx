@@ -44,9 +44,9 @@ export const Faq = () => {
 
       <div className="questions-container">
         <div className="question-container">
-          <span id="first" className="faq-question">
+          <span onClick={swapIcons} id="first" className="faq-question">
             {!first ? (
-              <FaQuestionCircle onClick={swapIcons} className="question-icon" />
+              <FaQuestionCircle className="question-icon" />
             ) : (
               <IoMdArrowDropupCircle
                 onClick={swapIcons}
@@ -59,7 +59,7 @@ export const Faq = () => {
         </div>
 
         <div className="question-container">
-          <span id="second" className="faq-question">
+          <span onClick={swapIcons} id="second" className="faq-question">
             {!second ? (
               <FaQuestionCircle onClick={swapIcons} className="question-icon" />
             ) : (
@@ -74,7 +74,7 @@ export const Faq = () => {
         </div>
 
         <div className="question-container">
-          <span id="third" className="faq-question">
+          <span onClick={swapIcons} id="third" className="faq-question">
             {!third ? (
               <FaQuestionCircle onClick={swapIcons} className="question-icon" />
             ) : (
@@ -89,7 +89,7 @@ export const Faq = () => {
         </div>
 
         <div className="question-container">
-          <span id="fourth" className="faq-question">
+          <span onClick={swapIcons} id="fourth" className="faq-question">
             {!fourth ? (
               <FaQuestionCircle onClick={swapIcons} className="question-icon" />
             ) : (
