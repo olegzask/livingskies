@@ -109,7 +109,14 @@ input {
 
 @media screen and (max-width: 720px) {
   .contactform-container {
-    width: 90%;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .contactform-header {
+    width: 100%;
+    font-size: 1.3rem;
+    border-bottom: ;
   }
 
   ::placeholder {
@@ -117,7 +124,26 @@ input {
     font-size: 0.9rem;
   }
 
+  .form-top-left {
+    margin: 0;
+    width: 98%;
+    gap: 0.5rem;
+  }
+
+  .form-top-right {
+    margin: 0;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
   .form-top {
-    width: 95%;
+    margin: 0 auto;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  #name {
+    width: 100%;
   }
 }
