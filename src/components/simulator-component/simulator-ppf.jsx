@@ -1,6 +1,6 @@
 import React, { useEffect, useState, forceUpdate } from "react";
-import { partsPpf } from "./parts";
-import { ppfParts } from "./ppf-parts-list";
+import { partsPpfSedan, partsPpfTruck } from "./parts";
+import { ppfPartsSedan, ppfPartsTruck } from "./ppf-parts-list";
 import { RadioButtons } from "./radio-buttons";
 import { Button } from "../button-component/button";
 import { handler } from "./handlers";
@@ -16,6 +16,7 @@ const prices = {
   headlamps: 100,
   luggagearea: 90,
   rockers: 600,
+  tailgate: 300,
 };
 
 const initPrice = {
@@ -25,9 +26,12 @@ const initPrice = {
   headlamps: 0,
   luggagearea: 0,
   rockers: 0,
+  tailgate: 0,
 };
 
 export const SimulatorPpf = () => {
+  const [linked, setLinked] = useState(ppfPartsSedan);
+  const [linkedOpts, setLinkedOpts] = useState(partsPpfSedan);
   const [vehicle, setVehicle] = useState("car");
   const [coverage, setCoverage] = useState("full");
   const [price, setPrice] = useState({
@@ -81,53 +85,95 @@ export const SimulatorPpf = () => {
 
   const checked = (event) => {
     const el = event.target;
-    if (
-      document.getElementById("rearbumper").checked &&
-      document.getElementById("luggagearea").checked
-    ) {
-      document.getElementById("luggagearea").checked = false;
-      document.getElementById("img_luggagearea").classList.remove("checked");
+
+    if (vehicle === "car") {
+      if (
+        document.getElementById("rearbumper").checked &&
+        document.getElementById("luggagearea").checked
+      ) {
+        document.getElementById("luggagearea").checked = false;
+        document.getElementById("img_luggagearea").classList.remove("checked");
+      }
+
+      if (el.checked && el.id !== "hoodfenders") {
+        showImgPart(el.id, true);
+        setPrice({ ...price, [el.id]: prices[el.id] });
+      }
+      if (
+        el.checked &&
+        el.id !== "hoodfenders" &&
+        !document.getElementById("luggagearea").checked
+      ) {
+        showImgPart(el.id, true);
+        setPrice({ ...price, [el.id]: prices[el.id], luggagearea: 0 });
+      }
+
+      if (!el.checked && el.id !== "hoodfenders") {
+        showImgPart(el.id, false);
+        setPrice({ ...price, [el.id]: 0 });
+      }
+
+      if (el.checked && el.id === "hoodfenders" && coverage === "partial") {
+        showImgPart(`${el.id}partial`, true);
+        setPrice({ ...price, [el.id]: prices[el.id] });
+      }
+      if (!el.checked && el.id === "hoodfenders" && coverage === "partial") {
+        showImgPart(`${el.id}partial`, false);
+        setPrice({ ...price, [el.id]: 0 });
+      }
+
+      if (el.checked && el.id === "hoodfenders" && coverage === "full") {
+        showImgPart(`${el.id}full`, true);
+        setPrice({ ...price, [el.id]: prices[el.id] + 800 });
+      }
+      if (!el.checked && el.id === "hoodfenders" && coverage === "full") {
+        showImgPart(`${el.id}full`, false);
+        setPrice({ ...price, [el.id]: 0 });
+      }
     }
 
-    if (el.checked && el.id !== "hoodfenders") {
-      showImgPart(el.id, true);
-      setPrice({ ...price, [el.id]: prices[el.id] });
-    }
-    if (
-      el.checked &&
-      el.id !== "hoodfenders" &&
-      !document.getElementById("luggagearea").checked
-    ) {
-      showImgPart(el.id, true);
-      setPrice({ ...price, [el.id]: prices[el.id], luggagearea: 0 });
-    }
+    if (vehicle === "truck") {
+      if (el.checked && el.id !== "hoodfenders") {
+        showImgPart(el.id, true);
+        setPrice({ ...price, [el.id]: prices[el.id] });
+      }
 
-    if (!el.checked && el.id !== "hoodfenders") {
-      showImgPart(el.id, false);
-      setPrice({ ...price, [el.id]: 0 });
-    }
+      if (!el.checked && el.id !== "hoodfenders") {
+        showImgPart(el.id, false);
+        setPrice({ ...price, [el.id]: 0 });
+      }
 
-    if (el.checked && el.id === "hoodfenders" && coverage === "partial") {
-      showImgPart(`${el.id}partial`, true);
-      setPrice({ ...price, [el.id]: prices[el.id] });
-    }
-    if (!el.checked && el.id === "hoodfenders" && coverage === "partial") {
-      showImgPart(`${el.id}partial`, false);
-      setPrice({ ...price, [el.id]: 0 });
-    }
+      if (el.checked && el.id === "hoodfenders" && coverage === "partial") {
+        showImgPart(`${el.id}partial`, true);
+        setPrice({ ...price, [el.id]: prices[el.id] });
+      }
+      if (!el.checked && el.id === "hoodfenders" && coverage === "partial") {
+        showImgPart(`${el.id}partial`, false);
+        setPrice({ ...price, [el.id]: 0 });
+      }
 
-    if (el.checked && el.id === "hoodfenders" && coverage === "full") {
-      showImgPart(`${el.id}full`, true);
-      setPrice({ ...price, [el.id]: prices[el.id] + 800 });
-    }
-    if (!el.checked && el.id === "hoodfenders" && coverage === "full") {
-      showImgPart(`${el.id}full`, false);
-      setPrice({ ...price, [el.id]: 0 });
+      if (el.checked && el.id === "hoodfenders" && coverage === "full") {
+        showImgPart(`${el.id}full`, true);
+        setPrice({ ...price, [el.id]: prices[el.id] + 800 });
+      }
+      if (!el.checked && el.id === "hoodfenders" && coverage === "full") {
+        showImgPart(`${el.id}full`, false);
+        setPrice({ ...price, [el.id]: 0 });
+      }
     }
   };
   const vehicleSelector = (event) => {
     const vehicleType = event.target.value;
-    if (vehicleType) setVehicle(vehicleType.toLowerCase());
+    if (vehicleType && vehicleType === "car") {
+      setLinked(ppfPartsSedan);
+      setLinkedOpts(partsPpfSedan);
+      setVehicle(vehicleType.toLowerCase());
+    }
+    if (vehicleType && vehicleType === "truck") {
+      setLinked(ppfPartsTruck);
+      setLinkedOpts(partsPpfTruck);
+      setVehicle(vehicleType.toLowerCase());
+    }
   };
   return (
     <div className="simulator-ppf-container">
@@ -138,7 +184,7 @@ export const SimulatorPpf = () => {
             src={`images/simulator-images/${vehicle}.jpg`}
             alt="vehicle-img"
           />
-          {Object.entries(ppfParts).map((el) => {
+          {Object.entries(linked).map((el) => {
             const name = el[0];
             const link = el[1];
             return (
@@ -161,7 +207,7 @@ export const SimulatorPpf = () => {
           <RadioButtons options={{ vehicleSelector }} />
         </div>
         <div className="parts-container">
-          {partsPpf.map((part, id) => {
+          {linkedOpts.map((part, id) => {
             return (
               <div key={id} className="part-container">
                 <span className="part-name">

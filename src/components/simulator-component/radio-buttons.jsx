@@ -17,22 +17,22 @@ export const RadioButtons = ({ options }) => {
       >
         <FormControlLabel
           onClick={options.vehicleSelector}
-          value="Car"
+          value="car"
           control={<Radio color="default" />}
-          label="Car"
+          label="car"
         />
 
         <FormControlLabel
           onClick={options.vehicleSelector}
-          value="SUv"
+          value="suv"
           control={<Radio color="default" />}
-          label="SUv"
+          label="suv"
         />
         <FormControlLabel
           onClick={options.vehicleSelector}
-          value="Pickup"
+          value="truck"
           control={<Radio color="default" />}
-          label="Pickup"
+          label="truck"
         />
       </RadioGroup>
     </FormControl>

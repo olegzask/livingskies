@@ -2,17 +2,18 @@ import React, { useState, useEffect } from "react";
 import { RadioButtons } from "./radio-buttons";
 import { Button } from "../button-component/button";
 import { tintShades } from "./tint-data";
-import { tintParts } from "./tintParts";
+import { tintPartsSedan, tintPartsTruck } from "./tintParts";
 
 import "./simulator-tint.styles.css";
 
 const tintPrices = {
   car: { fronts: 130, rears: 180, rearws: 120, wsbrow: 80 },
   suv: { fronts: 130, rears: 180, rearws: 100, wsbrow: 80 },
-  pickup: { fronts: 130, rears: 100, rearws: 100, wsbrow: 80 },
+  truck: { fronts: 130, rears: 100, rearws: 100, wsbrow: 80 },
 };
 
 export const SimulatorTint = () => {
+  const [linked, setLinked] = useState(tintPartsSedan);
   const [frontglass, setFrontGlass] = useState();
   const [rearsideglass, setRearSideGlass] = useState();
   const [rearwindshield, setRearWindshield] = useState();
@@ -25,7 +26,6 @@ export const SimulatorTint = () => {
   });
   const [vehicle, setVehicle] = useState("car");
   const [selectedParts, setSelectedParts] = useState([]);
-
   const totalPrice = Object.values(price).reduce(
     (prevValue, curValue) => prevValue + curValue,
     0
@@ -33,7 +33,7 @@ export const SimulatorTint = () => {
 
   const whatVehicle = () => {
     if (vehicle === "car") return tintPrices.car;
-    if (vehicle === "pickup") return tintPrices.pickup;
+    if (vehicle === "truck") return tintPrices.truck;
     if (vehicle === "suv") return tintPrices.suv;
   };
 
@@ -69,7 +69,14 @@ export const SimulatorTint = () => {
       el.classList.remove("shade-clicked")
     );
     const vehicleType = event.target.value;
-    if (vehicleType) setVehicle(vehicleType.toLowerCase());
+    if (vehicleType && vehicleType === "car") {
+      setLinked(tintPartsSedan);
+      setVehicle(vehicleType.toLowerCase());
+    }
+    if (vehicleType && vehicleType === "truck") {
+      setLinked(tintPartsTruck);
+      setVehicle(vehicleType.toLowerCase());
+    }
   };
 
   const clicked = (event) => {
@@ -113,7 +120,7 @@ export const SimulatorTint = () => {
             src={`images/simulator-images/${vehicle}.jpg`}
             alt="vehicle-img"
           />
-          {Object.entries(tintParts).map((el, id) => {
+          {Object.entries(linked).map((el, id) => {
             const [partName, link] = el;
 
             return (
