@@ -27,6 +27,7 @@ export const ContactForm = () => {
     const userTel = document.getElementById("tel");
     const userVehicle = document.getElementById("vehicle");
     const userService = document.getElementById("serv");
+    const userNotes = document.getElementById("usernotes");
 
     const errorChecker = () => {
       const missingFields = {
@@ -37,6 +38,7 @@ export const ContactForm = () => {
       if (!userEmail.value) missingFields.missing.push("Email");
       if (!userTel.value) missingFields.missing.push("Phone");
       if (!userVehicle.value) missingFields.missing.push("Vehicle");
+      if (!userNotes.value) missingFields.missing.push("Message");
       if (!userService.value || userService.value === "default")
         missingFields.missing.push("Service");
       alert(
@@ -134,7 +136,7 @@ export const ContactForm = () => {
           onChange={setFields}
           type="text"
           id="usernotes"
-          placeholder="Any specific instruction or questions"
+          placeholder="Message / Any specific instruction or questions"
           name="message"
         ></textarea>
       </form>
