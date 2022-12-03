@@ -44,6 +44,8 @@ export const ContactForm = () => {
       alert(
         `Missing Info: ${missingFields.missing.map((el) => el)}, Please check!`
       );
+
+      return missingFields;
     };
 
     if (
