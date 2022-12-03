@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
+import { ErrorPopup } from "./ErrorPopup";
 import emailjs from "@emailjs/browser";
 import { services } from "../service-card-component/services";
-import { Button } from "../../components/button-component/button";
 import "./contactform.styles.css";
 
 const formSkeleton = {
@@ -22,21 +22,54 @@ export const ContactForm = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_pzjei07",
-        "template_1ghrbsp",
-        form.current,
-        "EdFYBsAAe4ETIUbxP"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
+    const userName = document.getElementById("name");
+    const userEmail = document.getElementById("email");
+    const userTel = document.getElementById("tel");
+    const userVehicle = document.getElementById("vehicle");
+    const userService = document.getElementById("serv");
+
+    const errorChecker = () => {
+      const missingFields = {
+        missing: [],
+      };
+
+      if (!userName.value) missingFields.missing.push("Name");
+      if (!userEmail.value) missingFields.missing.push("Email");
+      if (!userTel.value) missingFields.missing.push("Phone");
+      if (!userVehicle.value) missingFields.missing.push("Vehicle");
+      if (!userService.value || userService.value === "default")
+        missingFields.missing.push("Service");
+      alert(
+        `Missing Info: ${missingFields.missing.map((el) => el)}, Please check!`
       );
+    };
+
+    if (
+      !userName.value ||
+      !userEmail.value ||
+      !userTel.value ||
+      !userVehicle.value ||
+      userService.value === "default"
+    ) {
+      errorChecker();
+    } else {
+      emailjs
+        .sendForm(
+          "service_pzjei07",
+          "template_1ghrbsp",
+          form.current,
+          "EdFYBsAAe4ETIUbxP"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+      alert("Thank you for submitting your request. We will reply shortly!");
+    }
   };
 
   const setFields = (event) => {
@@ -45,16 +78,6 @@ export const ContactForm = () => {
     setFormInfo({ ...formInfo, [id]: event.target.value, service: serviceOpt });
   };
 
-  const print = () => {
-    console.log(formInfo);
-  };
-
-  const info = async () => {
-    const data = await fetch("http://localhost:3001/api");
-    const jtext = await data.json();
-    setFetchedInfo(jtext.message);
-    console.log(jtext);
-  };
   return (
     <div className="contactform-container">
       <h2 className="contactform-header">SUBMIT YOUR REQUEST</h2>
