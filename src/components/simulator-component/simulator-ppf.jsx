@@ -1,22 +1,45 @@
 import React, { useEffect, useState, forceUpdate } from "react";
-import { partsPpfSedan, partsPpfTruck } from "./parts";
-import { ppfPartsSedan, ppfPartsTruck } from "./ppf-parts-list";
+import { partsPpfSedan, partsPpfSuv, partsPpfTruck } from "./parts";
+import { ppfPartsSedan, ppfPartsSuv, ppfPartsTruck } from "./ppf-parts-list";
 import { RadioButtons } from "./radio-buttons";
 import { Button } from "../button-component/button";
 import { handler } from "./handlers";
 import "./simulator-ppf.styles.css";
 
 const prices = {
-  hoodfenders: 350,
-  frontbumper: 525,
-  rearbumper: 525,
-  apillarsroofline: 175,
-  grille: 385,
-  mirrorsdoorcups: 125,
-  headlamps: 100,
-  luggagearea: 90,
-  rockers: 600,
-  tailgate: 300,
+  car: {
+    hoodfenders: 489.95,
+    frontbumper: 689.95,
+    rearbumper: 689.95,
+    apillarsroofline: 189.95,
+    grille: 299.95,
+    mirrorsdoorcups: 149.95,
+    headlamps: 159.95,
+    luggagearea: 89.95,
+    rockers: 649.95,
+  },
+  truck: {
+    hoodfenders: 524.95,
+    frontbumper: 689.95,
+    rearbumper: 479.95,
+    apillarsroofline: 189.95,
+    grille: 299.95,
+    mirrorsdoorcups: 149.95,
+    headlamps: 159.95,
+    rockers: 699.95,
+    tailgate: 399.95,
+  },
+  suv: {
+    hoodfenders: 524.95,
+    frontbumper: 709.95,
+    rearbumper: 709.95,
+    apillarsroofline: 189.95,
+    grille: 299.95,
+    mirrorsdoorcups: 149.95,
+    headlamps: 169.95,
+    luggagearea: 89.95,
+    rockers: 689.95,
+  },
 };
 
 const initPrice = {
@@ -27,6 +50,9 @@ const initPrice = {
   luggagearea: 0,
   rockers: 0,
   tailgate: 0,
+  apillarsroofline: 0,
+  rearbumper: 0,
+  grille: 0,
 };
 
 export const SimulatorPpf = () => {
@@ -41,6 +67,10 @@ export const SimulatorPpf = () => {
     headlamps: 0,
     luggagearea: 0,
     rockers: 0,
+    tailgate: 0,
+    apillarsroofline: 0,
+    rearbumper: 0,
+    grille: 0,
   });
 
   const totalPrice = Object.values(price).reduce(
@@ -97,7 +127,7 @@ export const SimulatorPpf = () => {
 
       if (el.checked && el.id !== "hoodfenders") {
         showImgPart(el.id, true);
-        setPrice({ ...price, [el.id]: prices[el.id] });
+        setPrice({ ...price, [el.id]: prices.car[el.id] });
       }
       if (
         el.checked &&
@@ -105,7 +135,7 @@ export const SimulatorPpf = () => {
         !document.getElementById("luggagearea").checked
       ) {
         showImgPart(el.id, true);
-        setPrice({ ...price, [el.id]: prices[el.id], luggagearea: 0 });
+        setPrice({ ...price, [el.id]: prices.car[el.id], luggagearea: 0 });
       }
 
       if (!el.checked && el.id !== "hoodfenders") {
@@ -115,7 +145,7 @@ export const SimulatorPpf = () => {
 
       if (el.checked && el.id === "hoodfenders" && coverage === "partial") {
         showImgPart(`${el.id}partial`, true);
-        setPrice({ ...price, [el.id]: prices[el.id] });
+        setPrice({ ...price, [el.id]: prices.car[el.id] });
       }
       if (!el.checked && el.id === "hoodfenders" && coverage === "partial") {
         showImgPart(`${el.id}partial`, false);
@@ -124,7 +154,53 @@ export const SimulatorPpf = () => {
 
       if (el.checked && el.id === "hoodfenders" && coverage === "full") {
         showImgPart(`${el.id}full`, true);
-        setPrice({ ...price, [el.id]: prices[el.id] + 800 });
+        setPrice({ ...price, [el.id]: prices.car[el.id] + 800 });
+      }
+      if (!el.checked && el.id === "hoodfenders" && coverage === "full") {
+        showImgPart(`${el.id}full`, false);
+        setPrice({ ...price, [el.id]: 0 });
+      }
+    }
+
+    if (vehicle === "suv") {
+      if (
+        document.getElementById("rearbumper").checked &&
+        document.getElementById("luggagearea").checked
+      ) {
+        document.getElementById("luggagearea").checked = false;
+        document.getElementById("img_luggagearea").classList.remove("checked");
+      }
+
+      if (el.checked && el.id !== "hoodfenders") {
+        showImgPart(el.id, true);
+        setPrice({ ...price, [el.id]: prices.suv[el.id] });
+      }
+      if (
+        el.checked &&
+        el.id !== "hoodfenders" &&
+        !document.getElementById("luggagearea").checked
+      ) {
+        showImgPart(el.id, true);
+        setPrice({ ...price, [el.id]: prices.suv[el.id], luggagearea: 0 });
+      }
+
+      if (!el.checked && el.id !== "hoodfenders") {
+        showImgPart(el.id, false);
+        setPrice({ ...price, [el.id]: 0 });
+      }
+
+      if (el.checked && el.id === "hoodfenders" && coverage === "partial") {
+        showImgPart(`${el.id}partial`, true);
+        setPrice({ ...price, [el.id]: prices.suv[el.id] });
+      }
+      if (!el.checked && el.id === "hoodfenders" && coverage === "partial") {
+        showImgPart(`${el.id}partial`, false);
+        setPrice({ ...price, [el.id]: 0 });
+      }
+
+      if (el.checked && el.id === "hoodfenders" && coverage === "full") {
+        showImgPart(`${el.id}full`, true);
+        setPrice({ ...price, [el.id]: prices.suv[el.id] + 800 });
       }
       if (!el.checked && el.id === "hoodfenders" && coverage === "full") {
         showImgPart(`${el.id}full`, false);
@@ -135,7 +211,7 @@ export const SimulatorPpf = () => {
     if (vehicle === "truck") {
       if (el.checked && el.id !== "hoodfenders") {
         showImgPart(el.id, true);
-        setPrice({ ...price, [el.id]: prices[el.id] });
+        setPrice({ ...price, [el.id]: prices.truck[el.id] });
       }
 
       if (!el.checked && el.id !== "hoodfenders") {
@@ -145,7 +221,7 @@ export const SimulatorPpf = () => {
 
       if (el.checked && el.id === "hoodfenders" && coverage === "partial") {
         showImgPart(`${el.id}partial`, true);
-        setPrice({ ...price, [el.id]: prices[el.id] });
+        setPrice({ ...price, [el.id]: prices.truck[el.id] });
       }
       if (!el.checked && el.id === "hoodfenders" && coverage === "partial") {
         showImgPart(`${el.id}partial`, false);
@@ -154,7 +230,7 @@ export const SimulatorPpf = () => {
 
       if (el.checked && el.id === "hoodfenders" && coverage === "full") {
         showImgPart(`${el.id}full`, true);
-        setPrice({ ...price, [el.id]: prices[el.id] + 800 });
+        setPrice({ ...price, [el.id]: prices.truck[el.id] + 800 });
       }
       if (!el.checked && el.id === "hoodfenders" && coverage === "full") {
         showImgPart(`${el.id}full`, false);
@@ -168,11 +244,19 @@ export const SimulatorPpf = () => {
       setLinked(ppfPartsSedan);
       setLinkedOpts(partsPpfSedan);
       setVehicle(vehicleType.toLowerCase());
+      return;
     }
     if (vehicleType && vehicleType === "truck") {
       setLinked(ppfPartsTruck);
       setLinkedOpts(partsPpfTruck);
       setVehicle(vehicleType.toLowerCase());
+      return;
+    }
+    if (vehicleType && vehicleType === "suv") {
+      setLinked(ppfPartsSuv);
+      setLinkedOpts(partsPpfSuv);
+      setVehicle(vehicleType.toLowerCase());
+      return;
     }
   };
   return (

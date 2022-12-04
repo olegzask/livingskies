@@ -3,7 +3,7 @@ import { MdDeleteForever } from "react-icons/md";
 import { RadioButtons } from "./radio-buttons";
 import { Button } from "../button-component/button";
 import { tintShades } from "./tint-data";
-import { tintPartsSedan, tintPartsTruck } from "./tintParts";
+import { tintPartsSedan, tintPartsTruck, tintPartsSuv } from "./tintParts";
 
 import "./simulator-tint.styles.css";
 
@@ -31,6 +31,21 @@ export const SimulatorTint = () => {
     (prevValue, curValue) => prevValue + curValue,
     0
   );
+
+  const clearShade = (event) => {
+    const selectedDiv = event.target.closest(".glass-container");
+    const selectedId = selectedDiv.id;
+
+    const hideImg = document.getElementById(`${selectedId}-tint`);
+    hideImg.style.opacity = 0;
+
+    setSelectedParts(selectedParts.map((el) => el != selectedId + ""));
+
+    setPrice({
+      ...price,
+      [selectedId]: 0,
+    });
+  };
 
   const whatVehicle = () => {
     if (vehicle === "car") return tintPrices.car;
@@ -71,12 +86,25 @@ export const SimulatorTint = () => {
     );
     const vehicleType = event.target.value;
     if (vehicleType && vehicleType === "car") {
+      const gg = Array.from(document.getElementsByClassName("part-tint"));
+      gg.map((el) => (el.style.opacity = 0));
       setLinked(tintPartsSedan);
       setVehicle(vehicleType.toLowerCase());
+      return;
     }
     if (vehicleType && vehicleType === "truck") {
+      const gg = Array.from(document.getElementsByClassName("part-tint"));
+      gg.map((el) => (el.style.opacity = 0));
       setLinked(tintPartsTruck);
       setVehicle(vehicleType.toLowerCase());
+      return;
+    }
+    if (vehicleType && vehicleType === "suv") {
+      const gg = Array.from(document.getElementsByClassName("part-tint"));
+      gg.map((el) => (el.style.opacity = 0));
+      setLinked(tintPartsSuv);
+      setVehicle(vehicleType.toLowerCase());
+      return;
     }
   };
 
@@ -163,8 +191,11 @@ export const SimulatorTint = () => {
                     </span>
                   );
                 })}
+                <span onClick={clearShade} className="del-btn-tint">
+                  {" "}
+                  <MdDeleteForever />
+                </span>
               </div>
-              <MdDeleteForever className="del-btn-tint" />
             </div>
             <div className="shades">
               <span className="shades-header">Rear Side Glass</span>
@@ -180,8 +211,11 @@ export const SimulatorTint = () => {
                     </span>
                   );
                 })}
+                <span onClick={clearShade} className="del-btn-tint">
+                  {" "}
+                  <MdDeleteForever />
+                </span>
               </div>
-              <MdDeleteForever className="del-btn-tint" />
             </div>{" "}
             <div className="shades">
               <span className="shades-header">Rear Windshield</span>
@@ -197,8 +231,11 @@ export const SimulatorTint = () => {
                     </span>
                   );
                 })}
+                <span onClick={clearShade} className="del-btn-tint">
+                  {" "}
+                  <MdDeleteForever />
+                </span>
               </div>
-              <MdDeleteForever className="del-btn-tint" />
             </div>{" "}
             <div className="shades">
               <span className="shades-header">Windshield Brow</span>
@@ -214,8 +251,11 @@ export const SimulatorTint = () => {
                     </span>
                   );
                 })}
+                <span onClick={clearShade} className="del-btn-tint">
+                  {" "}
+                  <MdDeleteForever />
+                </span>
               </div>
-              <MdDeleteForever className="del-btn-tint" />
             </div>
           </div>
           <div className="price-tint">

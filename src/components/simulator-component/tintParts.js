@@ -11,3 +11,10 @@ export const tintPartsTruck = {
   rearwindshield: "images/simulator-images/truck_/tint/rearws.png",
   windshieldbrow: "images/simulator-images/truck_/tint/brow.png",
 };
+
+export const tintPartsSuv = {
+  frontglass: "images/simulator-images/suv_/tint/fronts.png",
+  rearsideglass: "images/simulator-images/suv_/tint/rears.png",
+  rearwindshield: "images/simulator-images/suv_/tint/rearws.png",
+  windshieldbrow: "images/simulator-images/suv_/tint/brow.png",
+};
