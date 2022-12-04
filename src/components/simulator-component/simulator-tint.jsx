@@ -163,8 +163,8 @@ export const SimulatorTint = () => {
                     </span>
                   );
                 })}
-                <MdDeleteForever className="del-btn-tint" />
               </div>
+              <MdDeleteForever className="del-btn-tint" />
             </div>
             <div className="shades">
               <span className="shades-header">Rear Side Glass</span>
@@ -180,8 +180,8 @@ export const SimulatorTint = () => {
                     </span>
                   );
                 })}
-                <MdDeleteForever className="del-btn-tint" />
               </div>
+              <MdDeleteForever className="del-btn-tint" />
             </div>{" "}
             <div className="shades">
               <span className="shades-header">Rear Windshield</span>
@@ -197,8 +197,8 @@ export const SimulatorTint = () => {
                     </span>
                   );
                 })}
-                <MdDeleteForever className="del-btn-tint" />
               </div>
+              <MdDeleteForever className="del-btn-tint" />
             </div>{" "}
             <div className="shades">
               <span className="shades-header">Windshield Brow</span>
@@ -214,8 +214,8 @@ export const SimulatorTint = () => {
                     </span>
                   );
                 })}
-                <MdDeleteForever className="del-btn-tint" />
               </div>
+              <MdDeleteForever className="del-btn-tint" />
             </div>
           </div>
           <div className="price-tint">
