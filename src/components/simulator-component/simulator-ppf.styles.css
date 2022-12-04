@@ -68,7 +68,7 @@
   align-items: center;
 }
 .parts-container {
-  margin-top: 10px;
+  margin-top: 1rem;
   text-align: right;
 }
 
@@ -165,11 +165,10 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 500px;
+    height: auto;
   }
 
   .part-container {
-    display: flex;
     width: 100%;
   }
 
@@ -182,29 +181,27 @@
   }
 
   .part-name {
-    font-size: 25px;
+    font-size: 1.1rem;
   }
 
   .price-container {
-    position: relative;
-    align-items: center;
-    width: 30%;
-    bottom: 300px;
-    left: 150px;
-    margin: 0px;
+    width: 70%;
+    height: auto;
   }
 
   .btn-ppf-simulator {
     width: 100%;
-    height: 70px;
-    font-size: 20px;
+    height: auto;
+    font-size: 1.2rem;
   }
 
   .price {
-    padding: 0px;
-    margin-bottom: 10px;
+    /* padding: 0px;
+    margin-bottom: 1rem;
     text-align: center;
     width: 100%;
-    font-size: 17px;
+    font-size: 1.2rem;
+    height: 2.5rem; */
+    width: 100%;
   }
 }

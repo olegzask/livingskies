@@ -21,6 +21,6 @@ export const ppfPartsTruck = {
   rockers: "images/simulator-images/truck_/ppf/rockers.png",
   grille: "images/simulator-images/truck_/ppf/grille.png",
   rear_bumper: "images/simulator-images/truck_/ppf/bumperrear.png",
-  apillarsroofline: "images/simulator-images/truck_/ppf/apillarsroof.png",
+  apillarsroofline: "images/simulator-images/truck_/ppf/apillarroof.png",
   tailgate: "images/simulator-images/truck_/ppf/tailgate.png",
 };
