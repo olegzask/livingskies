@@ -167,6 +167,10 @@
     width: 100%;
   }
 
+  .shade-number {
+    font-size: 1.1rem;
+  }
+
   .price-tint {
     align-items: center;
     width: 70%;
@@ -182,5 +186,8 @@
   .btn-tint-simulator {
     width: 100%;
     font-size: 1.2rem;
+  }
+  .del-btn-tint {
+    font-size: 1.5rem;
   }
 }

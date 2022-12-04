@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { MdDeleteForever } from "react-icons/md";
 import { RadioButtons } from "./radio-buttons";
 import { Button } from "../button-component/button";
 import { tintShades } from "./tint-data";
@@ -162,6 +163,7 @@ export const SimulatorTint = () => {
                     </span>
                   );
                 })}
+                <MdDeleteForever className="del-btn-tint" />
               </div>
             </div>
             <div className="shades">
@@ -178,6 +180,7 @@ export const SimulatorTint = () => {
                     </span>
                   );
                 })}
+                <MdDeleteForever className="del-btn-tint" />
               </div>
             </div>{" "}
             <div className="shades">
@@ -194,6 +197,7 @@ export const SimulatorTint = () => {
                     </span>
                   );
                 })}
+                <MdDeleteForever className="del-btn-tint" />
               </div>
             </div>{" "}
             <div className="shades">
@@ -210,6 +214,7 @@ export const SimulatorTint = () => {
                     </span>
                   );
                 })}
+                <MdDeleteForever className="del-btn-tint" />
               </div>
             </div>
           </div>
