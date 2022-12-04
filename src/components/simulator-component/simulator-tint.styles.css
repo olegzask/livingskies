@@ -153,8 +153,13 @@
     width: 90%;
   }
 
+  .shades {
+    width: 95%;
+  }
+
   .shades-header {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    width: 70%;
   }
 
   .price-tint {
