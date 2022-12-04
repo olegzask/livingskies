@@ -155,6 +155,8 @@
 
   .shades {
     width: 95%;
+    height: 1.7rem;
+    align-items: center;
   }
 
   .glass-container {
@@ -188,6 +190,6 @@
     font-size: 1.2rem;
   }
   .del-btn-tint {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
 }
