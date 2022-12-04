@@ -157,9 +157,14 @@
     width: 95%;
   }
 
+  .glass-container {
+    margin-left: 1rem;
+  }
+
   .shades-header {
-    font-size: 1.1rem;
-    width: 70%;
+    font-size: 1rem;
+    text-align: end;
+    width: 100%;
   }
 
   .price-tint {
