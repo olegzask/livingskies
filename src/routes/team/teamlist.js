@@ -4,7 +4,7 @@ export const teamList = [
     position: "Owner / Installer",
     experience: "15 Years",
     specialization: ["Tinting", "PPF", "Wraps"],
-    about: "About me section",
+    about: "Founder, Owner & Operator",
     picture: "images/teampics/miah.jpg",
   },
 
